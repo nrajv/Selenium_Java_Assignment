@@ -18,7 +18,7 @@ public class DarwinWorkflow {
     @BeforeSuite
     public void setUp(){
         this.driver = lib.openBrowser();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
     }
 
     @Test
@@ -33,12 +33,13 @@ public class DarwinWorkflow {
         method.selectAttendance(3);
        method.clickOnSignIn();
 
-//       method.clickOnAttendance();
        method.clickOnApply();
 
-//       method.selectRequestType(1);
-//       method.selectReason(4);
-//       method.selectLocation(0);
+       method.selectRequestType();
+       method.selectReason();
+       method.pickFromDate();
+       method.pickToDate();
+       method.selectLocation();
        method.enterMessage("");
 
        method.clickOnSubmit();

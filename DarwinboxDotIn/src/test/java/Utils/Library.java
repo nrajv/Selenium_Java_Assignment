@@ -45,7 +45,6 @@ public class Library {
 
     public void dropDownSelect(By attendance, int no) {
         Select sel = new Select(getElement(attendance));
-        System.out.println("s2");
         sel.selectByIndex(no);
     }
 

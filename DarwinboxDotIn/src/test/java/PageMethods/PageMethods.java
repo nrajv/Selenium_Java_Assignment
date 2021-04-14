@@ -35,20 +35,20 @@ public class PageMethods implements PageLoc {
         lib.clickOnElement(ApplyButton);
     }
 
-    public void selectRequestType(int i) throws InterruptedException {
-//        lib.switchToFrame(0);
-//        System.out.println("s1");
-//        Thread.sleep(3000);
-
-        lib.dropDownSelect(RequestType,i);
+    public void selectRequestType() {
+        lib.clickOnElement(RequestType);
+        lib.clickOnElement(SelectReq);
     }
 
-    public void selectReason(int i) {
-        lib.dropDownSelect(Reason,i);
+    public void selectReason() throws InterruptedException {
+        lib.clickOnElement(Reason);
+        Thread.sleep(2000);
+        lib.clickOnElement(SelectReason);
     }
 
-    public void selectLocation(int i) {
-        lib.dropDownSelect(Location,i);
+    public void selectLocation() {
+        lib.clickOnElement(Location);
+        lib.clickOnElement(PickLoc);
     }
 
     public void enterMessage(String s) {
@@ -57,5 +57,15 @@ public class PageMethods implements PageLoc {
 
     public void clickOnSubmit() {
         lib.clickOnElement(Submit);
+    }
+
+    public void pickFromDate() {
+        lib.clickOnElement(FromDate);
+        lib.clickOnElement(PickFromDate);
+    }
+
+    public void pickToDate() {
+        lib.clickOnElement(ToDate);
+        lib.clickOnElement(PickToDate);
     }
 }
